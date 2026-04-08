@@ -20,11 +20,11 @@ export default class ProyectoController extends AbstractController{
 
     private async getListarProyectos(req:Request,res:Response):Promise<void>{
         console.log("Acceso a la ruta /listarProyectos");
-        res.send(200).json({mensaje:'Ruta consumida'});
+        res.status(200).json({mensaje:'Ruta consumida'});
     }
     private async postCrearProyecto(req:Request,res:Response):Promise<void>{
         console.log("Acceso a la ruta /crearProyecto");
-        res.send(200).json({mensaje:'Ruta consumida'});
+        res.status(200).json({mensaje:'Ruta consumida'});
     }
 
 }
