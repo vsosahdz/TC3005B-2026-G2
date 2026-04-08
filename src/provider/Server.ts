@@ -1,4 +1,5 @@
 import express,{Request, Response} from 'express';
+import AbstractController from '../controllers/AbstractController';
 
 class Server{
     //Atributos de instancia
@@ -7,7 +8,7 @@ class Server{
     private env:string;
 
     //Método constructor
-    constructor(appInit:{port:number; env:string; middlewares:any[]; controllers: any[]}){
+    constructor(appInit:{port:number; env:string; middlewares:any[]; controllers: AbstractController[]}){
         this.app = express();
         this.port = appInit.port;
         this.env = appInit.env;
@@ -21,13 +22,13 @@ class Server{
             this.app.use(middleware);
         });
     } 
-    private initControllers(controllers: any[]): void{
+    private initControllers(controllers: AbstractController[]): void{
         //   http://IP:PORT/ 
         this.app.get('/', (req: Request, res: Response) => {
             res.send('Server is working 🚀');
         })
         controllers.forEach(controller => {
-            this.app.use(controller);
+            this.app.use("/"+controller.prefix,controller.router);
         });
     }
     private async connecDB(){
