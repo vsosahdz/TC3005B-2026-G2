@@ -15,17 +15,31 @@ export default class ProyectoController extends AbstractController{
     protected initRoutes(): void {
         this.router.get('/listarProyectos',
             this.getListarProyectos.bind(this));
-        this.router.post('crearProyecto',
+        this.router.post('/crearProyecto',
             this.postCrearProyecto.bind(this));    
     }
 
     private async getListarProyectos(req:Request,res:Response):Promise<void>{
-        console.log("Acceso a la ruta /listarProyectos");
-        res.status(200).json({mensaje:'Ruta consumida'});
+        //SELECT
+        try{
+            const proyectos = await db.Proyecto.findAll();
+            res.status(200).json(proyectos);
+        }catch(err){
+            console.log(err);
+            res.status(500).json(err)
+        }
+        
     }
     private async postCrearProyecto(req:Request,res:Response):Promise<void>{
-        console.log("Acceso a la ruta /crearProyecto");
-        res.status(200).json({mensaje:'Ruta consumida'});
+        //CREATE
+        try{
+            console.log(req.body);
+            await db['Proyecto'].create(req.body);
+            res.status(200).json({message:"Registro de proyecto exitoso"});
+        }catch(err){
+            console.log(err);
+            res.status(500).json(err)
+        }
     }
 
 }

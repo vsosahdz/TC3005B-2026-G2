@@ -34,7 +34,7 @@ class Server{
     }
     private async connectDB(){
         try{
-            await db.sequelize.sync({force:true});
+            await db.sequelize.sync({force:false});
         }catch(err){
             console.log(err);
         }
