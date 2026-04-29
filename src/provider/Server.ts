@@ -1,6 +1,7 @@
 import express,{Request, Response} from 'express';
 import AbstractController from '../controllers/AbstractController';
 import db from '../models';
+import { dbnosql } from '../modelsNOSQL';
 
 class Server{
     //Atributos de instancia
@@ -35,6 +36,7 @@ class Server{
     private async connectDB(){
         try{
             await db.sequelize.sync({force:false});
+            await dbnosql.connect();
         }catch(err){
             console.log(err);
         }

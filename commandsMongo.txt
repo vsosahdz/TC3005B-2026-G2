@@ -39,3 +39,11 @@ security:
    authorization: "enabled"
 
    sudo systemctl restart mongod
+
+
+use admin
+
+show users;
+
+db.grantRolesToUser("admin",["readWriteAnyDatabase"])
+show users;

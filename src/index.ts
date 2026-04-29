@@ -5,6 +5,7 @@ import cors from 'cors';
 
 //Importar controllers
 import ProyectoController from "./controllers/ProyectoController";
+import ClienteController from "./controllers/ClienteController";
  //Integrar el proyecto 
 
  const server:Server = new Server({
@@ -16,7 +17,8 @@ import ProyectoController from "./controllers/ProyectoController";
         cors()
     ],
     controllers:[
-        ProyectoController.instance
+        ProyectoController.instance,
+        ClienteController.instance
     ]
  });
  server.init();
