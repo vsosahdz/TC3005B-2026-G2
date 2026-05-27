@@ -6,3 +6,6 @@
 6. Integrar proyecto
 7. Desplegar en la instancia de nube
 8. Probar ambas rutas en postman para revision
+git add .
+git commit -m "Descripcion"
+git push

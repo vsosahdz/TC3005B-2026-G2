@@ -22,10 +22,12 @@
   "homepage": "https://github.com/vsosahdz/TC3005B-2026-G2#readme",
   "dependencies": {
     "@typegoose/typegoose": "^13.2.1",
+    "aws-sdk": "^2.1693.0",
     "cors": "^2.8.6",
+    "crypto": "^1.0.1",
     "dotenv": "^17.4.1",
     "express": "^5.2.1",
-    "mongoose": "^9.6.1",
+    "mongoose": "^9.2.2",
     "mysql2": "^3.22.0",
     "sequelize": "^6.37.8"
   },

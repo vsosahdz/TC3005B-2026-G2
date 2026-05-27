@@ -14,3 +14,7 @@ export const DB_NOSQL_NAME:string = process.env.DB_NOSQL_NAME || 'test';
 export const DB_NOSQL_USER:string = process.env.DB_NOSQL_USER || 'admin';
 export const DB_NOSQL_PASS:string = process.env.DB_NOSQL_PASS || 'Password1234';
 export const DB_NOSQL_HOST:string = process.env.DB_NOSQL_HOST || 'localhost';
+export const COGNITO_APP_CLIENT_ID = process.env.COGNITO_APP_CLIENT_ID || '';
+export const COGNITO_APP_SECRET_HASH = process.env.COGNITO_APP_SECRET_HASH || '';
+export const COGNITO_USER_POOL_ID =process.env.COGNITO_USER_POOL_ID ||'';
+export const AWS_REGION = process.env.AWS_REGION || 'us-east-1';
