@@ -22,3 +22,12 @@ import ClienteController from "./controllers/ClienteController";
     ]
  });
  server.init();
+
+ declare global{
+    namespace Express{
+        interface Request {
+            user:string;
+            token:string;
+        }
+    }
+ }
