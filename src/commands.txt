@@ -1,0 +1,5 @@
+npm uninstall aws-sdk
+npm install @aws-sdk/client-cognito-identity-provider
+npm install axios jsonwebtoken jwk-to-pem
+npm install -D @types/jsonwebtoken @types/jwk-to-pem
+

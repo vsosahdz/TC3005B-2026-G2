@@ -1,7 +1,7 @@
 import { Request,Response } from "express";
 import AbstractController from "./AbstractController";
-import { UsuarioModel } from "../modelsNOSQL/Usuario";
-import { InitiateAuthCommandOutput } from "@aws-sdk/client-cognito-identity-provider";
+//import { UsuarioModel } from "../modelsNOSQL/Usuario";
+//import { InitiateAuthCommandOutput } from "@aws-sdk/client-cognito-identity-provider";
 
 
 class UsuarioController extends AbstractController{

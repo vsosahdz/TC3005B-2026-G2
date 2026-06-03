@@ -21,10 +21,8 @@
   },
   "homepage": "https://github.com/vsosahdz/TC3005B-2026-G2#readme",
   "dependencies": {
-    "@aws-sdk/client-cognito-identity-provider": "^3.1060.0",
+    "@aws-sdk/client-cognito-identity-provider": "^3.1061.0",
     "@typegoose/typegoose": "^13.2.1",
-    "@types/jsonwebtoken": "^9.0.10",
-    "@types/jwk-to-pem": "^2.0.3",
     "axios": "^1.17.0",
     "cors": "^2.8.6",
     "dotenv": "^17.4.1",
@@ -38,6 +36,8 @@
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/jwk-to-pem": "^2.0.3",
     "typescript": "^6.0.2"
   }
 }
